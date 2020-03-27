@@ -5,7 +5,7 @@ from django.contrib.contenttypes.models import ContentType
 try: # Django 2.0
     from django.urls import reverse
 except: # Django < 2.0
-    from django.core.urlresolvers import reverse
+    raise Exception("Django version not supported")
 
 from django.utils.safestring import mark_safe
 from . import settings

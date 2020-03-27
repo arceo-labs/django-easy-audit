@@ -6,7 +6,7 @@ from django.shortcuts import render
 try: # Django 2.0
     from django.urls import reverse
 except: # Django < 2.0
-    from django.core.urlresolvers import reverse
+    raise Exception("Django version not supported")
 
 from django.http import HttpResponseRedirect
 from django.utils.translation import ugettext_lazy as _
